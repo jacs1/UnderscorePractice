@@ -16,11 +16,35 @@
     </div>
 
     <script>
+ //    function hadndleResponse(response) {
+ //      links = _.map(response.items, function(book)) {
+ //        return book.volumeInfo.previewLink;
+
+ //        console.log(links);
+ //      });
+ // }
+      
+   
+      
+
+
+
+    
       function handleResponse(response) {
-        console.log(response.items)
-      }
+        _.each(response.items, function(book) {
+        var image = document.createElement('img')
+        image.setAttribute("src", book.volumeInfo.imageLinks.thumbnail);
+
+        var weburl = book.volumeInfo.previewLink;
+        var a = document.createElement('a');
+        a.setAttribute('href', weburl);
+          // _.map(response.items)
+        a.appendChild(image)
+        bookshelf.appendChild(a)
+      });
+    };
     </script>
 
-    <script src="https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse"></script>
+    <script src="https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse&key=AIzaSyA8JjzEHghU189TKmczHgbNdk6nuveJixU"></script>
   </body>
 </html>
