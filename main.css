@@ -1,0 +1,13 @@
+body {
+  background: url('http://bestfoodies.com/blog/wp-content/uploads/2010/11/wallpaper-texture-old-paper.jpg'), hsla(66, 100%, 0%, .8);
+
+}
+img{
+	float:left;
+	padding:50px;
+}
+
+h1{
+	font-family: Georgia;
+	text-align: center;
+}
